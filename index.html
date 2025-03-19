@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharmila Devi | Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background: linear-gradient(to right, #ac91fd, #5a2ce6); color: #fff; text-align: center; }
+
+        /* Header */
+        header { background: linear-gradient(45deg, #6a11cb, #0c111b); padding: 2rem 0;display: flex; flex-direction: column;align-items: center;text-align: center;}
+        h1 { font-size: 2.5rem; }
+        p { font-size: 1.2rem; font-weight: bold; }
+
+        /* Profile Picture */
+        .profile-picture {
+            width: 120px; height: 120px; border-radius: 90%; object-fit:cover;object-position: center top;
+            border: 4px solid white;margin-bottom: 10px;
+        }
+
+        /* Navigation */
+        nav { background:  #ff3cac; background: linear-gradient(45deg, #540ac3, #562b7c, #2b86c5); padding: 10px; }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav ul li { margin: 10px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; padding: 10px 15px; background:#562b7c); border-radius: 10px; }
+        nav ul li a:hover { background:#63107a; }
+
+        /* Sections */
+        section { margin: 40px auto; width: 80%; padding: 2rem; border-radius: 15px; background: rgba(170, 83, 233, 0.2); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: left; color: white; }
+        h2 { margin-bottom: 10px; }
+
+        /* Lists */
+        ul { list-style-type: none; padding-left: 10px; }
+        ul li { background: rgba(255, 255, 255, 0.3); margin: 5px 0; padding: 8px; border-radius: 10px; }
+        ul li a { color: white; text-decoration: none; }
+
+        /* Resume Download */
+        .download-button {
+            display: inline-block; margin-top: 10px; padding: 10px 20px; background:#ba0cfe;
+            color: white; text-decoration: none; border-radius: 20px; font-weight: bold;
+        }
+        .download-button:hover { background: #63107a ; }
+
+        /* Footer */
+        footer { padding: 1rem 0; background: #222; color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul { flex-direction: column; }
+            nav ul li { margin: 5px 0; }
+            .profile-picture { width: 100px; height: 100px; top: 90px; }
+        }
+        .h li:hover{background-color: #63107a;color: white;border-color: #562b7c;}
+        .pr li:hover{background-color: #63107a;color: white;border-color: #562b7c;}
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="selfimgnm.jpg" alt=" Profile Picture" class="profile-picture">
+        <h1>Sharmila Devi G</h1>
+        <p>I'm a Web Developer and programmer</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 style="color: #020209;">About Me</h2>
+        <p>I am an aspiring web developer with a strong passion for learning and building dynamic websites. Currently focused on mastering the latest web technologies, I'm dedicated to creating user-friendly and efficient web solutions. As a beginner, I'm eager to expand my skills in both front-end and back-end development, with a keen interest in building responsive, high-quality web experiences.
+
+            I'm driven by problem-solving and enjoy transforming creative ideas into functional web applications. I'm excited to continue learning, growing, and contributing to projects that make a positive impact through code.
+            
+            </p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 style="color: #020209;">Education</h2>
+        <p>🎓BCA - Queen Mary's College,Chennai</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 style="color: #020209">Skills</h2>
+        <ul class="h">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>React</li>
+            <li>Bootstrap</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 style="color: #020209">Projects</h2>
+        <ul class="pr">
+            <li><a href="#">Weather App</a></li>
+            <li><a href="#">Calculator</a></li>
+            <li><a href="#">Digital Portfolio</a></li>
+        </ul>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2 style="color: #020209">Resume</h2>
+        <a href="resume.pdf" target="_blank" class="download-button">Download CV</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy;2025 Sharmila Devi G</p>
+    </footer>
+
+    <script>
+        // scrolling
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({ top: target.offsetTop - 50, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
